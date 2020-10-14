@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF=8">
+	<title>Idealisto-Project</title>
+</head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<body>
+<div class="container">
+
+<form id='submit_params' method="POST" action="{{ url_for('main') }}">
+<div class="form-group">
+<table class="table">
+    <tr>
+        <td><p style="text-align:center">
+			<img src="static/images/idealisto.png" alt="idealisto" style='padding:1px; border:1px solid #FDFEFE ; width: 70%; height: 70%'>
+			</p>
+		</td>
+        <td width="200px"><p style="text-align:center"><h3>Enter the desired property in the table on the left</h3></p></td>
+    </tr>
+    <tr>
+        <td>
+            <table class="table">
+				<tr>
+					<br><br>
+				</tr>
+				<tr>
+				<tr>
+					<td><label for="male">Address</label></td>
+					<td><input type="search" class="form-control" id="fare"
+						placeholder="Enter m2" name="s_address" value="{{s_address}}">
+					</td>
+				</tr>
+				<tr>
+                    <td><label for="male">Meters</label></td>
+                    <td><input type="number" class="form-control" id="fare"
+                    	placeholder="Enter m2" name="s_sq_meters" value="{{s_sq_meters}}">
+                    </td>
+				</tr>
+				<tr>
+                    <td><label for="male">Rooms</label></td>
+                    <td><input type="number" class="form-control" id="fare"
+                    	placeholder="Enter number of rooms" name="s_rooms" value="{{s_rooms}}">
+                    </td>
+				</tr>
+				<tr>
+                    <td><label for="male">Bathrooms</label></td>
+                    <td><input type="number" class="form-control" id="fare"
+                    	placeholder="Enter number of bathrooms" name="s_bathrooms" value="{{s_bathrooms}}">
+                    </td>
+				</tr>
+				<tr>
+                    <td><label for="male">Floor</label></td>
+                    <td><input type="number" class="form-control" id="fare"
+                    	placeholder="Enter the floor" name="s_floor" value="{{s_floor}}">
+                    </td>
+				</tr>
+				<tr>
+                    <td><label for="male">Renewal needed?</label></td>
+                    <td>
+                     <SELECT class="s_renewal_needed" name="s_renewal_needed">
+				          <option value="{{s_renewal_needed}}" selected>{{s_renewal_needed}}</option>
+				          <option>Yes</option>
+				          <option>No</option>
+				     </SELECT>
+					</td>
+				</tr>
+				<tr>
+                    <td><label for="male">New development?</label></td>
+                    <td>
+                     <SELECT class="s_new_development" name="s_new_development">
+				          <option value="{{s_new_development}}" selected>{{s_new_development}}</option>
+				          <option>Yes</option>
+				          <option>No</option>
+				     </SELECT>
+					</td>
+				</tr>
+				<tr>
+                    <td><label for="male">Exterior</label></td>
+                    <td>
+                     <SELECT class="s_exterior" name="s_exterior">
+				          <option value="{{s_exterior}}" selected>{{s_exterior}}</option>
+				          <option>Yes</option>
+				          <option>No</option>
+				     </SELECT>
+					</td>
+				</tr>
+				<tr>
+                    <td><label for="male">Parking</label></td>
+                    <td>
+                     <SELECT class="s_parking" name="s_parking">
+				          <option value="{{s_parking}}" selected>{{s_parking}}</option>
+				          <option>Yes</option>
+				          <option>No</option>
+				     </SELECT>
+                </tr>
+				<td><button class="btn btn-default" type="submit" style="width: 100px; height: 30px;">A tasar!</button></td><td></td><td></td>
+				<tr>
+				<td width="200px"><p style="text-align:center"><h5>{{y_prob}}</h5></p></td>
+				</tr>
+			</table>
+        </td>
+		<td>
+
+        	<p style="text-align:center">
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1h-z5Pzoo-wa7YGUKSqQr4ZKZXYmG2fwc&center=-3.70,40.39563&zoom=18" width="1000" height="600"></iframe>
+			</p></td>
+  
+    <tr>
+</table>
+</div>
+</form>
+
+</div>
+</body>
+</html>
