@@ -1,0 +1,126 @@
+,NOMDIS,CODBAR,CODDISTRIT,NOMBRE,security,transport,health,education
+0,Villaverde,172,17,San Cristobal,0,20,6,3
+1,Villaverde,175,17,Los Angeles,1,94,18,4
+2,Villaverde,171,17,"Villaverde Alto, Casco Histórico de Villaverde",2,127,23,6
+4,Villaverde,174,17,Los Rosales,0,101,20,3
+22,Villaverde,173,17,Butarque,0,34,6,4
+232, , , , ,0,0,0,0
+630,Vicálvaro,191,19,Casco histórico de Vicálvaro,1,125,18,3
+633,Vicálvaro,194,19,El Cañaveral,0,0,1,0
+648,Vicálvaro,193,19,Valderrivas,0,37,5,3
+658,Fuencarral - El Pardo,085,08,La Paz,1,153,23,5
+662,Vicálvaro,192,19,Valdebernardo,0,65,7,2
+848,San Blas - Canillejas,205,20,Rosas,1,85,14,3
+904,Villa de Vallecas,181,18,Casco Histórico de Vallecas,1,131,18,4
+906,Villa de Vallecas,183,18,Ensanche de Vallecas,0,81,18,4
+913,Villa de Vallecas,182,18,Santa Eugenia,0,74,13,3
+1353,Usera,121,12,Orcasitas,0,86,12,3
+1354,Usera,123,12,San Fermín,0,95,9,1
+1356,Usera,127,12,Pradolongo,2,34,9,0
+1359,Usera,124,12,Almendrales,0,101,12,2
+1362,Usera,125,12,Moscardó,1,48,19,2
+1370,Usera,126,12,Zofío,0,47,8,2
+1377,Usera,122,12,Orcasur,0,102,8,1
+1751,Latina,102,10,Puerta del Angel,0,90,28,3
+1878,Tetuán,065,06,Valdeacederas,2,49,13,1
+1879,Tetuán,066,06,Berruguete,0,32,13,0
+1880,Tetuán,062,06,Cuatro Caminos,0,106,29,1
+1881,Chamartín,051,05,El Viso,0,168,26,2
+1885,Tetuán,063,06,Castillejos,1,58,17,1
+1886,Tetuán,061,06,Bellas Vistas,0,60,16,1
+1887,Tetuán,064,06,Almenara,2,79,16,2
+1889,Chamartín,056,05,Castilla,2,176,17,0
+1987,Chamartín,054,05,Hispanoamérica,0,126,33,0
+2019,Moncloa - Aravaca,093,09,Ciudad Universitaria,0,291,19,0
+2736,Chamberí,076,07,Vallehermoso,0,69,21,2
+2874,Retiro,032,03,Adelfas,0,76,7,1
+2875,Retiro,034,03,Ibiza,1,73,17,1
+2876,Retiro,036,03,Niño Jesús,0,50,11,2
+2879,Retiro,031,03,Pacífico,1,100,22,2
+2885,Retiro,035,03,Jerónimos,0,152,5,1
+2886,Salamanca,042,04,Goya,1,134,30,0
+2899,Retiro,033,03,Estrella,0,71,17,1
+2926,Arganzuela,027,02,Atocha,2,63,2,1
+2936,Centro,013,01,Cortes,2,156,15,0
+2949,Puente de Vallecas,136,13,Numancia,1,108,26,1
+3477,Puente de Vallecas,133,13,Palomeras Bajas,3,106,20,5
+3479,Puente de Vallecas,132,13,San Diego,0,70,25,1
+3482,Puente de Vallecas,134,13,Palomeras Sureste,0,167,21,6
+3498,Puente de Vallecas,131,13,Entrevías,1,132,19,6
+3507,Puente de Vallecas,135,13,Portazgo,0,76,18,5
+4354,Moncloa - Aravaca,097,09,Aravaca,0,73,14,2
+4355,Moncloa - Aravaca,092,09,Argüelles,1,84,22,1
+4358,Moncloa - Aravaca,094,09,Valdezarza,0,88,18,4
+4373,Moratalaz,145,14,Fontarrón,1,74,11,3
+4377,Moratalaz,146,14,Vinateros,0,48,10,2
+4379,Moratalaz,143,14,Marroquina,0,40,19,2
+4380,Moratalaz,144,14,Media Legua,0,54,12,2
+4413,Moratalaz,141,14,Pavones,1,69,8,2
+4420,Moratalaz,142,14,Horcajo,0,16,2,0
+4596,Latina,101,10,Cármenes,0,44,11,2
+4599,Latina,104,10,Aluche,1,152,45,6
+4600,Latina,107,10,Aguilas,2,137,37,5
+4601,Latina,103,10,Lucero,0,105,26,2
+4619,Latina,105,10,Campamento,0,51,10,2
+4639,Latina,106,10,Cuatro Vientos,0,18,3,0
+4679,Carabanchel,113,11,San Isidro,0,93,21,2
+4909,Moncloa - Aravaca,091,09,Casa de Campo,1,125,16,2
+5125,Carabanchel,114,11,Vista Alegre,1,77,31,2
+5196,Moncloa - Aravaca,095,09,Valdemarín,0,36,6,0
+5202,Centro,015,01,Universidad,3,113,37,1
+5224,Moncloa - Aravaca,096,09,El Plantío,0,22,3,0
+5647,Chamberí,071,07,Gaztambide,0,41,27,0
+5865,Fuencarral - El Pardo,086,08,Valverde,1,275,36,7
+5867,Fuencarral - El Pardo,083,08,Peñagrande,0,170,30,2
+5868,Fuencarral - El Pardo,082,08,Fuentelareina,0,19,2,0
+5873,Fuencarral - El Pardo,088,08,El Goloso,0,44,11,2
+5878,Fuencarral - El Pardo,084,08,Pilar,1,136,26,3
+5885,Fuencarral - El Pardo,087,08,Mirasierra,1,104,17,2
+5956,Fuencarral - El Pardo,081,08,El Pardo,0,2,3,1
+6349,Arganzuela,025,02,Delicias,0,87,16,1
+6543,Hortaleza,166,16,Valdefuentes,0,183,20,4
+6544,Hortaleza,162,16,Piovera,0,51,4,0
+6550,Hortaleza,161,16,Palomas,0,42,2,0
+6551,Hortaleza,164,16,Pinar del Rey,0,203,32,6
+6557,Hortaleza,163,16,Canillas,2,128,26,4
+6578,Hortaleza,165,16,Apostol Santiago,1,48,7,1
+6615,Barajas,214,21,Timón,0,36,6,3
+6665,Ciudad Lineal,157,15,Colina,0,52,12,0
+7390,Chamberí,074,07,Almagro,2,116,22,0
+7391,Chamberí,073,07,Trafalgar,0,63,22,1
+7393,Chamberí,075,07,Rios Rosas,2,90,24,1
+7404,Chamberí,072,07,Arapiles,0,24,17,2
+8545,Ciudad Lineal,151,15,Ventas,0,150,27,3
+8546,Ciudad Lineal,152,15,Pueblo Nuevo,1,125,36,2
+8547,Ciudad Lineal,158,15,Atalaya,0,8,1,0
+8548,Ciudad Lineal,153,15,Quintana,0,64,17,1
+8553,Ciudad Lineal,156,15,San Juan Bautista,0,50,11,1
+8554,Ciudad Lineal,159,15,Costillares,0,85,13,1
+8563,Ciudad Lineal,155,15,San Pascual,0,51,15,2
+8569,Ciudad Lineal,154,15,Concepción,1,44,15,2
+8655,Salamanca,041,04,Recoletos,0,141,22,0
+9080,San Blas - Canillejas,201,20,Simancas,0,102,17,2
+9576,Chamartín,052,05,Prosperidad,0,79,27,1
+9578,Chamartín,055,05,Nueva España,0,116,24,3
+9608,Salamanca,044,04,Guindalera,0,137,32,1
+9618,Chamartín,053,05,Ciudad Jardín,1,57,12,2
+10222,Salamanca,046,04,Castellana,0,83,22,0
+10494,Centro,012,01,Embajadores,0,97,28,3
+10495,Carabanchel,112,11,Opañel,0,69,18,4
+10497,Carabanchel,111,11,Comillas,0,31,15,1
+10498,Carabanchel,117,11,Abrantes,0,103,17,2
+10503,Carabanchel,115,11,Puerta Bonita,2,94,21,2
+10506,Carabanchel,116,11,Buenavista,0,196,26,3
+10507,Arganzuela,022,02,Acacias,1,137,23,3
+11137,Centro,016,01,Sol,2,63,18,0
+11746,Centro,014,01,Justicia,0,96,23,1
+11748,Centro,011,01,Palacio,2,172,25,3
+11796,Arganzuela,026,02,Palos de Moguer,0,104,18,1
+12941,Salamanca,045,04,Lista,0,58,23,1
+12981,Salamanca,043,04,Fuente del Berro,2,68,14,1
+13621,Arganzuela,021,02,Imperial,1,74,12,3
+13622,Arganzuela,023,02,Chopera,1,85,10,0
+13634,Arganzuela,024,02,Legazpi,0,64,9,1
+14498,Barajas,211,21,Alameda de Osuna,0,114,14,2
+14499,Barajas,213,21,Casco Histórico de Barajas,0,23,5,0
+14765,Barajas,215,21,Corralejos,0,58,3,0

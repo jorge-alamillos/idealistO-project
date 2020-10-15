@@ -1,9 +1,11 @@
 from flask import Flask, request, Response
 import pickle
-import get_address_neigh as gan
+import src.get_address_neigh as gan
 from flask import render_template
 from flask import Markup
 import os
+import locale
+locale.setlocale(locale.LC_MONETARY, '')
 
 app=Flask(__name__)
 
@@ -19,17 +21,22 @@ LIFT = "Yes"
 LATI=40.41
 LONGI=-3,70
 ADDRESS = "ironhack madrid"
-Y = 0
+Y = ""
 
 # necesario en pythonanywhere
 PATH=os.path.dirname(os.path.abspath(__file__))
 
 @app.before_first_request
 def startup():
-    global model 
-    filename = '/ExtraTrees_model.sav'
+    global model
+    global read_barrios 
+    global read_punt
+    global pisos
+    filename = '/data/outputs/Extra_Trees_ML_Model/ExtraTrees_model.sav'
     model = pickle.load(open(PATH+f'{filename}', 'rb'))
-    
+    read_barrios= gan.read_barrios()
+    read_punt = gan.read_barr_punt()
+    pisos = gan.read_inmuebles_staditicas()
 
 @app.route('/') 
 def welcome():
@@ -74,22 +81,22 @@ def main():
         #get neighbourhood points 
         get_coord = gan.get_coordinates(s_address)
         coord = gan.coordintes2gdf(get_coord)
-        read_barrios= gan.read_barrios()
         barrio = gan.get_barrio(coord,read_barrios)
-        read_punt = gan.read_barr_punt()
         security,transport,health,education = gan.get_punt(barrio,read_punt)
+        area_price = gan.get_nearest_point(pisos,coord)
         lat = get_coord["lat"]
         lng = get_coord["lng"]
         print(security,transport,health,education,lat,lng)
         
         # piso
-        piso=[[meters,rooms,bathrooms,floor,5000,renewal,
+        piso=[[meters,rooms,bathrooms,floor,area_price,renewal,
         new,lift,exterior,parking,lat,lng,security,transport,health,
         education]]
         print(piso)
         
         # prediccion
-        y_prob=model.predict(piso)
+        y_prob= locale.currency(model.predict(piso),grouping=True)
+        
         
        
         return render_template('index.html',

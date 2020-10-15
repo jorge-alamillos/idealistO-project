@@ -3,9 +3,14 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF=8">
-	<title>Idealisto-Project</title>
+	<title>Idealisto Tasador</title>
 </head>
 <body>
+<style>
+div {
+  background-image: url(static/images/gv.jpg);
+}	
+</style>
 <div class="container">
 
 <form id='submit_params' method="POST" action="{{ url_for('main') }}">
@@ -13,48 +18,50 @@
 <table class="table">
     <tr>
         <td><p style="text-align:center">
-			<img src="static/images/idealisto.png" alt="idealisto" style='padding:1px; border:1px solid #FDFEFE ; width: 50%; height: 50%'>
+			<img src="static/images/idealisto.png" alt="idealisto" style='padding:1px; width: 70%; height: 70%'>
 			</p>
 		</td>
+    </tr>
     <tr>
         <td>
             <table class="table">
 				<tr>
-					<td width="200px"><p style="text-align:right"><h3>Enter the desired property</h3></p></td>
+					<br><br>
 				</tr>
 				<tr>
+					<td style="text-align:right;color:honeydew" width="200px"><p><h3>Introduce los datos del inmueble</h3></p></td>
 				<tr>
-					<td style="text-align: center;"><label for="male"><b>Address</b></label></td>
+					<td style="text-align:right;color:honeydew"><label for="male">Address</label></td>
 					<td><input type="search" class="form-control" id="fare"
 						placeholder="Enter m2" name="s_address" value="{{s_address}}">
 					</td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Floor</b></label></td>
-                    <td><input type="number" class="form-control" id="fare"
-                    	placeholder="Enter floor" name="s_floor" value="{{s_floor}}">
-                    </td>
-				</tr>
-				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Meters</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Meters</label></td>
                     <td><input type="number" class="form-control" id="fare"
                     	placeholder="Enter m2" name="s_sq_meters" value="{{s_sq_meters}}">
                     </td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Rooms</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Rooms</label></td>
                     <td><input type="number" class="form-control" id="fare"
                     	placeholder="Enter number of rooms" name="s_rooms" value="{{s_rooms}}">
                     </td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Bathrooms</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Bathrooms</label></td>
                     <td><input type="number" class="form-control" id="fare"
                     	placeholder="Enter number of bathrooms" name="s_bathrooms" value="{{s_bathrooms}}">
                     </td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Renewal needed?</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Floor</label></td>
+                    <td><input type="number" class="form-control" id="fare"
+                    	placeholder="Enter the floor" name="s_floor" value="{{s_floor}}">
+                    </td>
+				</tr>
+				<tr>
+                    <td style="text-align:right;color:honeydew"><label for="male">Renewal needed</label></td>
                     <td>
                      <SELECT class="s_renewal_needed" name="s_renewal_needed">
 				          <option value="{{s_renewal_needed}}" selected>{{s_renewal_needed}}</option>
@@ -64,7 +71,7 @@
 					</td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>New development?</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">New development</label></td>
                     <td>
                      <SELECT class="s_new_development" name="s_new_development">
 				          <option value="{{s_new_development}}" selected>{{s_new_development}}</option>
@@ -74,7 +81,7 @@
 					</td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Lift</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Lift</label></td>
                     <td>
                      <SELECT class="s_lift" name="s_lift">
 				          <option value="{{s_lift}}" selected>{{s_lift}}</option>
@@ -84,7 +91,7 @@
 					</td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Exterior</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label style="color:honeydew" for="male">Exterior</label></td>
                     <td>
                      <SELECT class="s_exterior" name="s_exterior">
 				          <option value="{{s_exterior}}" selected>{{s_exterior}}</option>
@@ -94,24 +101,24 @@
 					</td>
 				</tr>
 				<tr>
-                    <td style="text-align: center;"><label for="male"><b>Parking</b></label></td>
+                    <td style="text-align:right;color:honeydew"><label for="male">Parking</label></td>
                     <td>
                      <SELECT class="s_parking" name="s_parking">
 				          <option value="{{s_parking}}" selected>{{s_parking}}</option>
 				          <option>Yes</option>
 				          <option>No</option>
 				     </SELECT>
-                </tr style="text-indent:200px;">
-				<td><button class="btn btn-default" type="submit" style="width: 100px; height: 30px;"style="text-indent:200px;">Tasar piso!</button></td><td></td><td></td>
+                </tr>
+				<td style="text-align:right;"><button class="btn btn-default" type="submit" style="width: 100px; height: 30px;">Tasar</button></td><td></td><td></td>
 				<tr>
-				<td border: 5px solid #1C6EA4;border-radius: 10px;style="text-indent:200px;" width="200px"><p style="text-align:center"><h5>{{y_prob}}</h5></p></td>
+				<td style="text-align:right;color:honeydew" width="200px"><p style="text-align:center"><h2>{{y_prob}}</h2></p></td>
 				</tr>
 			</table>
         </td>
 		<td>
 
         	<p style="text-align:center">
-				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1h-z5Pzoo-wa7YGUKSqQr4ZKZXYmG2fwc&center=-3.70,40.39563&zoom=18" width="1100" height="600"></iframe>
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1h-z5Pzoo-wa7YGUKSqQr4ZKZXYmG2fwc&center=-3.70,40.39563&zoom=18" width="1200" height="600"></iframe>
 			</p></td>
   
     <tr>
