@@ -9,6 +9,9 @@ from shapely.geometry import MultiPoint
 from shapely.ops import nearest_points
 
 def get_coordinates(address):
+    """
+    Uses Google Geocode API to get the coordinates from a direction in the parameter field
+    """
     key = os.getenv('GOOGLEAUTH')
     url = 'https://maps.googleapis.com/maps/api/geocode/json?address='
     rqst  = requests.get(url + address + '&key=' + key)    
@@ -18,6 +21,9 @@ def get_coordinates(address):
     return location
 
 def coordintes2gdf(x):
+    """
+    converts coordinates to GeoDataFrame with geometry
+    """
     geo = gpd.GeoDataFrame({'lat': [x["lat"]], 'lng': [x["lng"]]})
     gdf = gpd.GeoDataFrame(geo, geometry=gpd.points_from_xy(geo.lng, geo.lat),crs="EPSG:4326")
     return gdf.to_crs("EPSG:4326")
@@ -34,6 +40,9 @@ def read_barr_punt():
     
     
 def get_punt(barrio,barr_punt):
+    """
+    Extracts info about security, health, education and transport for given neighborhood
+    """
     distrito = barrio["NOMBRE"].to_string(index=False).lstrip()
     x = barr_punt[barr_punt["NOMBRE"]==distrito]
     security = int(x["security"].to_string(index=False).lstrip())
@@ -46,6 +55,9 @@ def read_inmuebles_staditicas():
     return pd.read_csv("data/outputs/TablaInmueblesyEstadisticas_1_csv.csv",delimiter=";")    
 
 def get_nearest_point(pisos,coord):
+    """
+    Finds the nearest coorditate and calculates the mean of the properties price for the zone
+    """
     geopisos = gpd.GeoDataFrame(pisos)
     geopisos =  gpd.GeoDataFrame(geopisos, geometry=gpd.points_from_xy(geopisos.long, geopisos.lat),crs="EPSG:4326")
     x = nearest_points(MultiPoint(geopisos["geometry"]),coord["geometry"][0])  

@@ -26,6 +26,7 @@ Y = ""
 # necesario en pythonanywhere
 PATH=os.path.dirname(os.path.abspath(__file__))
 
+#load Machine Learning model before first request to the server
 @app.before_first_request
 def startup():
     global model
@@ -44,11 +45,8 @@ def welcome():
         "1.status": "OK",
         "2.message": "Welcome to idealisto-api",
         "3.Available endpoints": "" ,
-        "A.--> /student/create/<studentname>.": "Creates a student and save into DB",
-        "B.--> /student/all": "Lists all students in database",
-        "C.--> /lab/create/<labname>": "Creates a lab to be analyzed",
-        "D.--> /lab/<lab_id>/search": "Search student submissions on specific lab",
-        "E.--> /lab/<lab_id>/meme": "Get a random meme (extracted from the ones used for each student pull request for that lab"
+        "A.--> /find/": "Introduce the property data and get the appraisal price",
+        "B.--> /web/": "Soon Available. Working on more functions!!"
     }
 # main app
 @app.route("/find", methods=['POST', 'GET'])
@@ -67,7 +65,7 @@ def main():
         s_parking=request.form['s_parking']
         s_address=request.form['s_address']
         
-        # se reasigna para prediccion
+        # reassigns for prediction
         meters =int(s_sq_meters)
         rooms =int(s_rooms)
         bathrooms =int(s_bathrooms)
@@ -78,7 +76,7 @@ def main():
         exterior=1 if s_exterior=="Yes" else 0
         parking=1 if s_parking=="Yes" else 0
         
-        #get neighbourhood points 
+        #gets neighbourhood data for the prediction 
         get_coord = gan.get_coordinates(s_address)
         coord = gan.coordintes2gdf(get_coord)
         barrio = gan.get_barrio(coord,read_barrios)
@@ -88,17 +86,16 @@ def main():
         lng = get_coord["lng"]
         print(security,transport,health,education,lat,lng)
         
-        # piso
+        # property data for the prediction model
         piso=[[meters,rooms,bathrooms,floor,area_price,renewal,
         new,lift,exterior,parking,lat,lng,security,transport,health,
         education]]
         print(piso)
         
-        # prediccion
+        # prediction
         y_prob= locale.currency(model.predict(piso),grouping=True)
         
-        
-       
+               
         return render_template('index.html',
             s_sq_meters =s_sq_meters,
             s_rooms=s_rooms,
@@ -114,7 +111,7 @@ def main():
             
           
     else:
-        # parametros por defecto
+        # parameters by default
         return render_template('index.html',
             s_sq_meters=SQ_METERS,
             s_rooms =ROOMS,
@@ -127,9 +124,6 @@ def main():
             s_parking =PARKING,
             s_address=ADDRESS,
             y_prob = Y)
-
-
-
 
 
 if __name__== '__main__':
