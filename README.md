@@ -5,7 +5,7 @@
 
 This project aims to be a property appraiser application for properties in the city of Madrid.
 
-This app is accessible in the following link: [Idealisto Tasador](https://idealisto.ew.r.appspot.com/)
+This app is accessible in the following link (please, be patient the first time while the server starts): [Idealisto Tasador](https://idealisto.ew.r.appspot.com/find)
 
 This work has been executed as the final project of the Ironhack's Data Analytics Fulltime Bootcamp. Three main areas hace been covered: 
 - Extraction, cleaning and enrichment of data through the use webscrapping, APIs or Pandas amongo others.
